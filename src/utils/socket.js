@@ -8,6 +8,11 @@ function init(httpServer){
         connectionStateRecovery:{
             maxDisconnectionDuration: 1000,
         },
+        cors:{
+            origin:"*",
+            methods:["GET","POST"],
+            
+        }
         
     })
     io.on("connection",(socket)=>{
